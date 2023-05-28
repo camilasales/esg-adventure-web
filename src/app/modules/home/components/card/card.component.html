@@ -1,15 +1,22 @@
-<mat-card class="card-main">
-    <div class="mat-elevation-z2" [style]="'background-color: '+color">
+<mat-card class="card">
+    <div class="mat-elevation-z2 card-content" [style]="'background-color: '+color">
+        <div class="card-avatar mat-elevation-z2"><img [src]="urlImagem" alt="logo carta" class="logo-card"></div>
         <mat-card-header>
-            <div class="card-avatar"><img [src]="urlImagem" alt=""></div>
             <mat-card-title>{{tituloCard}}</mat-card-title>
         </mat-card-header>
         <mat-card-content class="my-3">
             <p>{{descricaoCard}}</p>
         </mat-card-content>
-        <mat-card-actions>
-            <span>{{valor1}}</span>
-            <span>{{valor2}}</span>
+        <mat-card-actions class="card-value">
+            <div class="mat-elevation-z2">
+                <img src="../../../../../assets/icons/moeda1.png" alt="valor 1" class="valor-img">
+                <span>{{valor1}}</span>
+            </div>
+            <span>ou</span>
+            <div class="mat-elevation-z2">
+                <img src="../../../../../assets/icons/moeda2.png" alt="valor 2" class="valor-img">
+                <span>{{valor2}}</span>
+            </div>
         </mat-card-actions>
     </div>
 </mat-card>
