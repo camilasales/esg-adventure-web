@@ -1,0 +1,18 @@
+<div class="container">
+    <header class="d-flex align-items-center justify-content-center py-5">
+        <img src="../../../../../assets/img/logo_esg_adventure2.png" alt="" class="logo">
+    </header>
+    <main class="row main-list">
+        <div class="col-md-3"  *ngFor="let atividade of listaAtividadess">
+            <app-card 
+                [tituloCard]="atividade.titulo" 
+                [descricaoCard]="atividade.descricao"
+                [urlImagem]="atividade.urlImagem"
+                [valor1]="atividade.valor1"
+                [valor2]="atividade.valor2"
+                [color]="atividade.color"
+            ></app-card>
+            <button mat-raised-button class="main-list-button">Jogar</button>
+        </div>
+    </main>
+</div>

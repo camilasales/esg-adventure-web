@@ -1,0 +1,15 @@
+<mat-card class="card-main">
+    <div class="mat-elevation-z2" [style]="'background-color: '+color">
+        <mat-card-header>
+            <div class="card-avatar"><img [src]="urlImagem" alt=""></div>
+            <mat-card-title>{{tituloCard}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="my-3">
+            <p>{{descricaoCard}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <span>{{valor1}}</span>
+            <span>{{valor2}}</span>
+        </mat-card-actions>
+    </div>
+</mat-card>
