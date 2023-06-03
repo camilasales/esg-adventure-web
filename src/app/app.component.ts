@@ -1,3 +1,4 @@
+import { LoginService } from './modules/login/service/login.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'esg-adventure';
+  nomeUsuario: string;
+  isUsuarioLogado$ = this.loginService.verificaUsuarioLogado();
+
+  constructor(
+    private loginService: LoginService
+  ){
+    this.nomeUsuario = this.loginService.obterUsuario?.nome;
+  }
+
+  sair(){
+    this.loginService.deslogar();
+  }
 }
