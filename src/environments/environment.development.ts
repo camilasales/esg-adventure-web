@@ -1,4 +1,5 @@
 export const environment = {
     production: true,
-    apiUrl: 'http://my-api-url'
+    apiUrl: 'https://esg-adventure-api.onrender.com'
+    // apiUrl: 'http://localhost:3000'
 };
